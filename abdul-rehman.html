@@ -1,0 +1,118 @@
+    
+<html lang="en" data-app-block-surface="stage" style="background-color: var(--main-surface-primary, #ffffff);"><head><style>@layer sandbox-defaults{html,body,#root{margin:0;padding:0}}</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdul Rehman Kayani — Full-Stack WordPress Developer</title>
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:light-dark(#f7f8fc,#0a0d14);
+  --surface:light-dark(#ffffff,#111722);
+  --surface2:light-dark(#f0f2f7,#171d29);
+  --text:light-dark(#10131a,#f5f7fb);
+  --muted:light-dark(#5f6878,#aab3c2);
+  --border:light-dark(#e2e6ee,#273041);
+  --accent:#7357ff;
+  --accent2:#9b7cff;
+  --shadow:0 20px 60px rgba(35,40,60,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+button,a{font:inherit}
+.app{min-height:100vh;background:var(--bg)}
+.container{width:min(1120px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:20px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;align-items:center}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}.nav-links a:hover{color:var(--text)}
+.menu{display:none;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;padding:8px 11px}
+.hero{padding:105px 0 85px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-170px;background:radial-gradient(circle,rgba(115,87,255,.20),transparent 68%);pointer-events:none}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:#31c48d;display:inline-block;box-shadow:0 0 0 5px rgba(49,196,141,.12)}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.065em;max-width:900px;margin:24px 0 22px}h1 em{font-style:normal;color:var(--accent)}
+.hero p{max-width:700px;color:var(--muted);font-size:19px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:750;border:1px solid var(--border);color:var(--text);background:var(--surface)}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:58px}.stat{padding:20px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.stat strong{display:block;font-size:25px;letter-spacing:-.03em}.stat span{color:var(--muted);font-size:13px}
+section{padding:88px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.kicker{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.13em;font-weight:800}.section-head h2{font-size:40px;letter-spacing:-.05em;margin:6px 0 0}.section-head p{max-width:470px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:var(--shadow)}.card h3{margin:0 0 12px;font-size:20px}.card p{color:var(--muted);margin:0 0 14px}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:12px;font-weight:700;border:1px solid var(--border);padding:7px 10px;border-radius:999px;background:var(--surface2)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-card{padding:23px;border:1px solid var(--border);border-radius:17px;background:var(--surface)}.skill-card h3{margin:0 0 8px}.skill-card p{margin:0;color:var(--muted);font-size:14px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{position:relative;overflow:hidden}.project-top{height:145px;border-radius:15px;background:linear-gradient(135deg,rgba(115,87,255,.25),rgba(155,124,255,.06));border:1px solid var(--border);display:flex;align-items:flex-end;padding:18px;margin-bottom:20px}.project-top strong{font-size:25px;letter-spacing:-.04em}.project h3{margin:0 0 8px;font-size:22px}.project p{font-size:14px}.project ul{padding-left:19px;color:var(--muted);font-size:14px}.project li{margin:5px 0}.project .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.project .tags span{font-size:11px;font-weight:700;color:var(--muted);background:var(--surface2);padding:5px 8px;border-radius:7px}
+.experience{display:grid;gap:14px}.role{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:25px;border:1px solid var(--border);border-radius:17px;background:var(--surface)}.role-date{color:var(--muted);font-size:13px}.role h3{margin:0 0 3px}.role .company{color:var(--accent);font-weight:700;font-size:14px}.role p{color:var(--muted);font-size:14px;margin:10px 0 0}.role ul{color:var(--muted);font-size:14px;margin:10px 0 0;padding-left:19px}
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:20px}.contact h2{font-size:46px;letter-spacing:-.05em;margin:8px 0 15px}.contact p{color:var(--muted)}.contact-list{display:grid;gap:10px}.contact-item{padding:17px;border:1px solid var(--border);border-radius:14px;background:var(--surface)}.contact-item small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.contact-item a{color:var(--text);text-decoration:none;font-weight:650}
+.footer{padding:35px 0 50px;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
+.reveal{opacity:0;transform:translateY(15px);transition:opacity .55s ease,transform .55s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){.nav-links{display:none}.menu{display:block}.hero{padding-top:75px}.stats{grid-template-columns:repeat(2,1fr)}.about-grid,.contact,.projects{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.role{grid-template-columns:1fr;gap:8px}.section-head{display:block}.section-head p{margin-top:12px}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}h1{font-size:48px}.hero p{font-size:17px}}
+</style>
+<style>html, body, #root {
+      margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0;
+    }
+html,body,#root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html,body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important}button,input,textarea,select{font-family:inherit}html{background-color:transparent}html.chatgptOled.dark,html.mobileSkybridge.dark{background-color:#000}@supports (font: -apple-system-body){html.mobileSkybridge{font:-apple-system-body}}html.desktopSkybridge.dark{background-color:#1e1e1e}html.transparentSkybridgeBackground,html.transparentSkybridgeBackground.dark{background-color:transparent}html.androidSkybridge,html.androidSkybridge body,html.androidSkybridge *{-webkit-tap-highlight-color:rgba(255,255,255,0)}html.androidSkybridge *::selection,html.androidSkybridge *::-moz-selection{background:#fff0;color:inherit}</style></head>
+<body>
+<div class="app" id="top">
+<header class="nav"><div class="container nav-inner"><a class="logo" href="#top">AR<span>.</span></a><nav class="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav><button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button></div></header>
+<main>
+<section class="hero"><div class="container">
+<div class="eyebrow"><i></i> Available for opportunities</div>
+<h1>Abdul Rehman<br><em>Full-Stack WordPress Developer.</em></h1>
+<p>I build responsive websites and web applications with a strong focus on WordPress, front-end development, technical problem-solving, and reliable digital experiences.</p>
+<div class="actions"><a class="btn primary" href="#work">View my work →</a><a class="btn" href="#contact">Let's talk</a></div>
+<div class="stats"><div class="stat"><strong>WordPress</strong><span>Development &amp; customization</span></div><div class="stat"><strong>Full-Stack</strong><span>WordPress development</span></div><div class="stat"><strong>Remote</strong><span>Independent team collaboration</span></div><div class="stat"><strong>BSCS</strong><span>Computer Science</span></div></div>
+</div></section>
+<section id="about"><div class="container"><div class="section-head"><div><div class="kicker">About me</div><h2>Technical skills, practical delivery.</h2></div><p>I combine development experience with strong communication, troubleshooting, and client-facing skills.</p></div><div class="about-grid"><div class="card reveal show"><h3>What I do</h3><p>I work across website development, customization, maintenance, troubleshooting, responsive interfaces, API integrations, and database-related tasks. My current professional work includes remote WordPress development and broader full-stack WordPress development responsibilities.</p><p>I focus on understanding requirements, building practical solutions, fixing issues efficiently, and keeping projects maintainable and user-friendly.</p><div class="tag-row"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Bricks</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span></div></div><div class="card reveal show"><h3>Education</h3><p><strong>BS Computer Science</strong><br>Allama Iqbal Open University<br>2021–2025</p><h3 style="margin-top:24px">Working style</h3><p>Remote-ready, organized, adaptable, and comfortable working independently while collaborating with teams and clients.</p></div></div></div></section>
+<section id="skills"><div class="container"><div class="section-head"><div><div class="kicker">Toolkit</div><h2>Skills &amp; technologies.</h2></div></div><div class="skills"><div class="skill-card reveal"><h3>Frontend</h3><p>HTML5, CSS3, JavaScript, responsive design, user-focused interfaces, Elementor, Bricks.</p></div><div class="skill-card reveal"><h3>Full-Stack WordPress</h3><p>Custom theme &amp; plugin development, advanced custom fields (ACF), custom post types, and API integrations.</p></div><div class="skill-card reveal"><h3>Databases</h3><p>MySQL management, database queries, and structured website content storage.</p></div><div class="skill-card reveal"><h3>WordPress</h3><p>Theme and plugin customization, website maintenance, WooCommerce, troubleshooting and optimization.</p></div><div class="skill-card reveal"><h3>APIs &amp; Tools</h3><p>REST APIs, third-party integrations, Git, GitHub, VS Code and AI-assisted development workflows.</p></div><div class="skill-card reveal"><h3>IT Support</h3><p>Technical troubleshooting, software and hardware support, basic networking, email and system support.</p></div></div></div></section>
+<section id="work"><div class="container"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects that show what I can build.</h2></div><p>Professional and project work presented around the technologies and responsibilities I have worked with.</p></div><div class="projects">
+<article class="card project reveal"><div class="project-top"><strong>AINTIS / NTIS</strong></div><h3>Enterprise technology platform</h3><p>Website development and customization work for the AINTIS / NTIS digital platform.</p><ul><li>Built and refined responsive website sections using WordPress and Elementor.</li><li>Worked on product, service, portfolio and navigation experiences.</li><li>Customized layouts and resolved website presentation and functionality issues.</li><li>Supported ongoing website maintenance and improvements.</li></ul><div class="tags"><span>WordPress</span><span>Elementor</span><span>HTML/CSS</span><span>JavaScript</span></div></article>
+<article class="card project reveal"><div class="project-top"><strong>NTIS Pro</strong></div><h3>Business operations platform</h3><p>A centralized mobile platform concept supporting booking management and day-to-day operational workflows.</p><ul><li>Worked around product presentation and website content for the platform.</li><li>Supported pages describing scheduling, notifications, time tracking, invoicing and communication.</li><li>Focused on clear product communication and responsive web presentation.</li></ul><div class="tags"><span>Product Web</span><span>WordPress</span><span>Responsive UI</span></div></article>
+<article class="card project reveal"><div class="project-top"><strong>Enterprise Assistant</strong></div><h3>AI front-desk / internal operations concept</h3><p>An AI assistant concept designed around company knowledge, chat/voice interaction and internal operations.</p><ul><li>Worked on challenge, solution and result messaging for the product concept.</li><li>Structured website content around a company AI “brain” and document-based assistance.</li><li>Helped shape the product presentation for web visitors.</li></ul><div class="tags"><span>AI Concept</span><span>Product UX</span><span>Web Content</span></div></article>
+<article class="card project reveal"><div class="project-top"><strong>Custom Web Projects</strong></div><h3>WordPress development &amp; maintenance</h3><p>Ongoing remote development work covering website builds, customization, troubleshooting and optimization.</p><ul><li>Develop and customize themes, plugins and website sections.</li><li>Implement custom functionality using PHP, JavaScript, HTML5 and CSS3.</li><li>Optimize responsive layouts, performance, scalability and security.</li><li>Integrate third-party tools and work with MySQL-backed functionality.</li></ul><div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>WordPress</span></div></article>
+</div></div></section>
+<section id="experience"><div class="container"><div class="section-head"><div><div class="kicker">Experience</div><h2>Professional background.</h2></div></div><div class="experience">
+<div class="role reveal"><div class="role-date">Current / Recent</div><div><h3>Full-Stack WordPress Developer</h3><div class="company">Remote Company Work</div><p>Remote development work involving WordPress and web application development, customization, maintenance and technical problem-solving.</p><ul><li>Develop and maintain responsive websites and web functionality.</li><li>Work with WordPress, PHP, JavaScript, HTML, CSS and databases.</li><li>Handle troubleshooting, optimization and third-party integrations.</li></ul></div></div>
+<div class="role reveal"><div class="role-date">IT Experience</div><div><h3>IT Support / System Administration</h3><div class="company">Technical Support</div><p>Experience supporting users and day-to-day IT operations, including troubleshooting, email management and basic networking.</p></div></div>
+<div class="role reveal"><div class="role-date">3 years</div><div><h3>Verification / Customer Support</h3><div class="company">Call Center</div><p>Handled verification-related customer interactions, requirements and case processing, building strong communication, attention-to-detail and problem-solving skills.</p></div></div>
+<div class="role reveal"><div class="role-date">1 year</div><div><h3>B2B Real Estate</h3><div class="company">Customer / Business Communication</div><p>Worked in B2B real-estate communication and client-facing operations.</p></div></div>
+<div class="role reveal"><div class="role-date">8 months</div><div><h3>Home Insurance Claims</h3><div class="company">Claims Support</div><p>Handled customer communication and claim-related information in a home insurance environment.</p></div></div>
+</div></div></section>
+<section id="contact"><div class="container"><div class="contact"><div class="card reveal"><div class="kicker">Contact</div><h2>Have a project in mind?</h2><p>I’m interested in WordPress development, full-stack WordPress development, IT/technical opportunities, and remote projects.</p><div class="actions"><a class="btn primary" href="mailto:abdulrehmankayani403@gmail.com">Email me</a><a class="btn" href="#top">Back to top ↑</a></div></div><div class="contact-list"><div class="contact-item reveal"><small>Email</small><a href="mailto:abdulrehmankayani403@gmail.com">abdulrehmankayani403@gmail.com</a></div><div class="contact-item reveal"><small>Phone</small><a href="tel:+923125436984">+92 312 5436984</a></div><div class="contact-item reveal"><small>Location</small><span>Islamabad / Rawalpindi, Pakistan</span></div><div class="contact-item reveal"><small>LinkedIn</small><a href="https://www.linkedin.com/in/abdul-rehman-kayani-82a413202" target="_blank">View Profile ↗</a></div></div></div></div></section>
+</main>
+<footer class="footer"><div class="container">© 2026 Abdul Rehman Kayani · Full-Stack WordPress Developer</div></footer>
+</div>
+<script>
+function toggleMenu(){const n=document.querySelector('.nav-links');n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='72px';n.style.right='4%';n.style.flexDirection='column';n.style.padding='16px';n.style.background='var(--surface)';n.style.border='1px solid var(--border)';n.style.borderRadius='14px';}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+<script>
+  (() => {
+    function updateSurface(surface) {
+      if (surface !== "inline" && surface !== "stage") {
+        return;
+      }
+
+      const root = document.documentElement;
+      const isDarkMode = root.classList.contains("dark");
+      const stageBackground = isDarkMode ? "#212121" : "#ffffff";
+      root.setAttribute("data-app-block-surface", surface);
+      root.style.backgroundColor =
+        surface === "inline"
+          ? "transparent"
+          : "var(--main-surface-primary, " + stageBackground + ")";
+    }
+
+    window.addEventListener("openai:set_globals", (event) => {
+      const surface = event.detail?.globals?.__appBlockSurface;
+      if (surface != null) {
+        updateSurface(surface);
+      }
+    });
+
+    const initialSurface =
+      window.openai?.__appBlockSurface ??
+      document.documentElement.getAttribute("data-app-block-surface") ??
+      "inline";
+    updateSurface(initialSurface);
+  })();
+</script>
+
+</body></html>
